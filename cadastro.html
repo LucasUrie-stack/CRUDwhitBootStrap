@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <title>Cadastro</title>
+    <script>
+        function uploadFile(target) {
+            document.getElementById("file-name").innerHTML = target.files[0].name;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+
+
+        <h1>Cadastro</h1>
+        <form method="POST" action="salvar.php" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="nome">Nome completo:</label>
+                <input type="text" class="form-control" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" class="form-control" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" class="form-control" name="senha" required>
+            </div>
+            <div class="form-group">
+                <label for="tipo">Admim</label>
+                <input type="radio" class="form-control" name="tipo" value="Admim" required>
+            </div>
+            <div class="form-group">
+                <label for="tipo">Padrão</label>
+                <input type="radio" class="form-control" name="tipo" value="padrao" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-success" value="Cadastrar">
+                <a href="index.html" class="btn btn-primary">Voltar</a>
+            </div>
+            <div class="form-control">
+                <label for="upload-button" class="btn btn-success btn-sm"> Avatar </label>
+                <input style="display: none" type="file" name="avatar" id="upload-button" onchange="uploadFile(this)" />
+                <span id="file-name"></span><br><br>
+            </div>
+        </form>
+        
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
